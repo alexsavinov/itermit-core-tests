@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="API tests">
+    <test name="Regression tests">
+<!--        <classes>-->
+<!--            <class name="AdminTest"/>-->
+<!--            <class name="UserTest"/>-->
+<!--            <class name="GuestTest"/>-->
+<!--        </classes>-->
+        <packages>
+            <package name="apiTests.*"/>
+        </packages>
+    </test>
+</suite>
