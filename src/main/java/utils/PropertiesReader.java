@@ -5,11 +5,10 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class PropertiesReader {
-    private Properties properties;
+    private final Properties properties;
 
     public PropertiesReader(String propertyFileName) {
-        InputStream is = getClass().getClassLoader()
-                .getResourceAsStream(propertyFileName);
+        InputStream is = getClass().getClassLoader().getResourceAsStream(propertyFileName);
         this.properties = new Properties();
         try {
             this.properties.load(is);

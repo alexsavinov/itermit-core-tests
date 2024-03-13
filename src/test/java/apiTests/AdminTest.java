@@ -12,17 +12,12 @@ import api.pojos.Profile;
 import api.pojos.User;
 import org.json.simple.JSONObject;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import utils.PropertiesReader;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Set;
 import java.util.UUID;
 
@@ -39,6 +34,7 @@ public class AdminTest extends BaseTest {
 
     @BeforeMethod
     public void setUp() {
+        System.out.println("BASE_URL: " + BASE_URL);
         getSpecifications(requestSpecification(BASE_URL), responseSpecification(200));
 
         LoginResponse response = given()
@@ -558,11 +554,11 @@ public class AdminTest extends BaseTest {
         assertEquals(response.getDescription(), "description1");
         assertEquals(response.getLogo(), "1.jpg");
         assertEquals(response.getAuthor().getId(), 2L);
-        assertEquals(response.getPublishDate(), LocalDateTime.of(2021, 01, 17,
+        assertEquals(response.getPublishDate(), LocalDateTime.of(2021, 1, 17,
                 15, 47, 44, 301554000));
-        assertEquals(response.getCreatedDate(), LocalDateTime.of(2021, 01, 17,
+        assertEquals(response.getCreatedDate(), LocalDateTime.of(2021, 1, 17,
                 15, 47, 44, 301554000));
-        assertEquals(response.getLastUpdateDate(), LocalDateTime.of(2021, 01, 23,
+        assertEquals(response.getLastUpdateDate(), LocalDateTime.of(2021, 1, 23,
                 9, 23, 21, 484039000));
     }
 
@@ -588,11 +584,11 @@ public class AdminTest extends BaseTest {
         assertEquals(firstArticle.getDescription(), "description2");
         assertEquals(firstArticle.getLogo(), "2.jpg");
         assertEquals(firstArticle.getAuthor().getId(), 2L);
-        assertEquals(firstArticle.getPublishDate(), LocalDateTime.of(2022, 01, 17,
+        assertEquals(firstArticle.getPublishDate(), LocalDateTime.of(2022, 1, 17,
                 15, 47, 45, 301554000));
-        assertEquals(firstArticle.getCreatedDate(), LocalDateTime.of(2022, 01, 17,
+        assertEquals(firstArticle.getCreatedDate(), LocalDateTime.of(2022, 1, 17,
                 15, 51, 44, 301554000));
-        assertEquals(firstArticle.getLastUpdateDate(), LocalDateTime.of(2022, 01, 23,
+        assertEquals(firstArticle.getLastUpdateDate(), LocalDateTime.of(2022, 1, 23,
                 9, 23, 22, 484039000));
     }
 
