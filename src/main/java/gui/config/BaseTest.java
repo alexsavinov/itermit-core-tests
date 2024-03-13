@@ -24,6 +24,8 @@ public class BaseTest {
         REGISTER_URL = baseUrl + "auth/register";
         HOME_URL = baseUrl;
 
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+
         Configuration.browser = "chrome";
         Configuration.browserSize = "1280x920";
         Configuration.holdBrowserOpen = false;
