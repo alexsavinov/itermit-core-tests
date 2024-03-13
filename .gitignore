@@ -2,3 +2,4 @@
 build
 target
 src/test/resources/application.properties
+/guiTests.iml
