@@ -7,6 +7,8 @@ import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.codeborne.selenide.webdriver.WebDriverFactory;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
+import io.github.bonigarcia.wdm.managers.ChromiumDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -65,12 +67,14 @@ public class BaseTest {
 //        WebDriverRunner webDriverRunner = new WebDriverRunner();
 //        webDriverRunner.setWebDriver(webDriver);
 
-        WebDriverManager.chromiumdriver().setup();
-        ChromeOptions chromeOptions = new ChromeOptions().setBinary("/usr/bin/chromium");
-        webDriver = new ChromeDriver(chromeOptions);
+//        ChromeDriverManager.getInstance().setup();
+        ChromiumDriverManager.getInstance().setup();
+//        WebDriverManager.chromiumdriver().setup();
+//        ChromeOptions chromeOptions = new ChromeOptions().setBinary("/usr/bin/chromium");
+//        webDriver = new ChromeDriver(chromeOptions);
 
-        WebDriverRunner webDriverRunner = new WebDriverRunner();
-        webDriverRunner.setWebDriver(webDriver);
+//        WebDriverRunner webDriverRunner = new WebDriverRunner();
+//        webDriverRunner.setWebDriver(webDriver);
 
 //        WebDriverFactory driverFactory = new WebDriverFactory();
 //        driverFactory.createWebDriver()
@@ -91,6 +95,6 @@ public class BaseTest {
     @AfterClass
     public void tearDown() {
         Selenide.closeWebDriver();
-        webDriver.close();
+//        webDriver.close();
     }
 }
