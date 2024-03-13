@@ -28,7 +28,7 @@ public class BaseTest {
 //        System.setProperty("selenide.browser", "chrome");
 
 //        Configuration.webdriverLogsEnabled = true;
-        Configuration.browser = "chrome";
+        Configuration.browser = "firefox";
         Configuration.browserSize = "1280x920";
         Configuration.holdBrowserOpen = false;
         Configuration.headless = true;
