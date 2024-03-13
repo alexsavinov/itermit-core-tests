@@ -68,13 +68,16 @@ public class BaseTest {
 //        webDriverRunner.setWebDriver(webDriver);
 
 //        ChromeDriverManager.getInstance().setup();
-        ChromiumDriverManager.getInstance().setup();
+//        ChromiumDriverManager.getInstance().setup();
+        WebDriverManager instance = ChromiumDriverManager.getInstance();
+        instance.setup();
+        webDriver = instance.getWebDriver();
 //        WebDriverManager.chromiumdriver().setup();
 //        ChromeOptions chromeOptions = new ChromeOptions().setBinary("/usr/bin/chromium");
 //        webDriver = new ChromeDriver(chromeOptions);
 
-//        WebDriverRunner webDriverRunner = new WebDriverRunner();
-//        webDriverRunner.setWebDriver(webDriver);
+        WebDriverRunner webDriverRunner = new WebDriverRunner();
+        webDriverRunner.setWebDriver(webDriver);
 
 //        WebDriverFactory driverFactory = new WebDriverFactory();
 //        driverFactory.createWebDriver()
@@ -95,6 +98,6 @@ public class BaseTest {
     @AfterClass
     public void tearDown() {
         Selenide.closeWebDriver();
-//        webDriver.close();
+        webDriver.close();
     }
 }
