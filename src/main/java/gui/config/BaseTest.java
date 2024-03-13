@@ -35,7 +35,7 @@ public class BaseTest {
 //        Configuration.headless = false;
         Configuration.timeout = 10000;
         Configuration.pageLoadTimeout = 10000;
-        Configuration.pageLoadStrategy = "normal";
+        Configuration.pageLoadStrategy = "eager";
         Configuration.screenshots = true;
         Configuration.savePageSource = false;
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
