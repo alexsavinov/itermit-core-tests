@@ -34,7 +34,6 @@ public class AdminTest extends BaseTest {
 
     @BeforeMethod
     public void setUp() {
-        System.out.println("BASE_URL: " + BASE_URL);
         getSpecifications(requestSpecification(BASE_URL), responseSpecification(200));
 
         LoginResponse response = given()
