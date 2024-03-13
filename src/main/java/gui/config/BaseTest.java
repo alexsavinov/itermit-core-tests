@@ -27,7 +27,7 @@ public class BaseTest {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        System.setProperty("selenide.browser", "chrome");
 
-//        Configuration.webdriverLogsEnabled = true;
+        Configuration.webdriverLogsEnabled = true;
         Configuration.browser = "firefox";
         Configuration.browserSize = "1280x920";
         Configuration.holdBrowserOpen = false;
