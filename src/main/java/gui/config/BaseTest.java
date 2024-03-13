@@ -5,6 +5,8 @@ import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideConfig;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.codeborne.selenide.webdriver.WebDriverFactory;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -56,12 +58,22 @@ public class BaseTest {
                 .screenshots(true)
                 .savePageSource(false));
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-        options.setBinary("/usr/bin/chromium");
-        webDriver = new ChromeDriver(options);
+//        ChromeOptions options = new ChromeOptions();
+//        options.addArguments("headless");
+//        options.setBinary("/usr/bin/chromium");
+//         = new ChromeDriver(options);
+//        WebDriverRunner webDriverRunner = new WebDriverRunner();
+//        webDriverRunner.setWebDriver(webDriver);
+
+        WebDriverManager.chromiumdriver().setup();
+        ChromeOptions chromeOptions = new ChromeOptions().setBinary("/usr/bin/chromium");
+        webDriver = new ChromeDriver(chromeOptions);
+
         WebDriverRunner webDriverRunner = new WebDriverRunner();
         webDriverRunner.setWebDriver(webDriver);
+
+//        WebDriverFactory driverFactory = new WebDriverFactory();
+//        driverFactory.createWebDriver()
     }
 
     @BeforeMethod
