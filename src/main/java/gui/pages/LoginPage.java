@@ -30,6 +30,7 @@ public class LoginPage extends PageTools {
     }
 
     public void clickLoginButton() {
+        waitForLoad();
         click(loginButton);
     }
 
