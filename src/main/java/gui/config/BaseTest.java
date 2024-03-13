@@ -25,7 +25,7 @@ public class BaseTest {
         HOME_URL = baseUrl;
 
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-        System.setProperty("selenide.browser", "chrome");
+//        System.setProperty("selenide.browser", "chrome");
 
 //        Configuration.webdriverLogsEnabled = true;
         Configuration.browser = "chrome";
