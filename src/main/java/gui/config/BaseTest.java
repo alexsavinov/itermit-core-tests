@@ -26,13 +26,14 @@ public class BaseTest {
 
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        System.setProperty("selenide.browser", "chrome");
-        System.setProperty("webdriver.firefox.marionette", "false");
-        System.setProperty(
-                "webdriver.gecko.driver",
-                "/usr/local/bin/geckodriver");
+//        System.setProperty("webdriver.firefox.marionette", "false");
+//        System.setProperty(
+//                "webdriver.gecko.driver",
+//                "/usr/local/bin/geckodriver");
 
         Configuration.webdriverLogsEnabled = true;
-        Configuration.browser = "firefox";
+        Configuration.browser = "chrome";
+//        Configuration.browser = "firefox";
         Configuration.browserSize = "1280x920";
         Configuration.holdBrowserOpen = false;
         Configuration.headless = true;
