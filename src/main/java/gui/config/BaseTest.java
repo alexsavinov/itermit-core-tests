@@ -2,8 +2,15 @@ package gui.config;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideConfig;
+import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chromium.ChromiumDriver;
+import org.openqa.selenium.chromium.ChromiumOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -15,6 +22,7 @@ public class BaseTest {
     public static String LOGIN_URL;
     public static String REGISTER_URL;
     public static String HOME_URL;
+    public static WebDriver webDriver;
 
     @BeforeClass(alwaysRun = true)
     public void configuration() {
@@ -47,6 +55,13 @@ public class BaseTest {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
                 .savePageSource(false));
+
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("headless");
+        options.setBinary("/usr/bin/chromium");
+        webDriver = new ChromeDriver(options);
+        WebDriverRunner webDriverRunner = new WebDriverRunner();
+        webDriverRunner.setWebDriver(webDriver);
     }
 
     @BeforeMethod
@@ -64,5 +79,6 @@ public class BaseTest {
     @AfterClass
     public void tearDown() {
         Selenide.closeWebDriver();
+        webDriver.close();
     }
 }
