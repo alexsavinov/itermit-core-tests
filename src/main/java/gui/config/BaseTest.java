@@ -27,6 +27,9 @@ public class BaseTest {
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        System.setProperty("selenide.browser", "chrome");
         System.setProperty("webdriver.firefox.marionette", "false");
+        System.setProperty(
+                "webdriver.gecko.driver",
+                "/usr/local/bin/geckodriver");
 
         Configuration.webdriverLogsEnabled = true;
         Configuration.browser = "firefox";
