@@ -65,8 +65,11 @@ public class BaseTest {
                 .savePageSource(false));
 
 
-        WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker()
-                .enableVnc().enableRecording();
+        WebDriverManager wdm = WebDriverManager.chromiumdriver()
+//                        .browserInDocker()
+//                .enableVnc()
+//                .enableRecording()
+                ;
 
         webDriver = wdm.create();
 
