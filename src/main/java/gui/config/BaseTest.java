@@ -49,7 +49,7 @@ public class BaseTest {
 
         Configuration.webdriverLogsEnabled = true;
 //        Configuration.browser = "chrome";
-        Configuration.browser = "safari";
+//        Configuration.browser = "firefox";
 //        Configuration.browser = SelenoidWebDriverProvider.class.getName();
         Configuration.browserSize = "1280x920";
         Configuration.holdBrowserOpen = false;
@@ -64,6 +64,10 @@ public class BaseTest {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
                 .savePageSource(false));
+
+        WebDriverManager.chromiumdriver().setup();
+        ChromeOptions opt = new ChromeOptions().setBinary("/usr/bin/chromium");
+        webDriver = new ChromeDriver(opt);
 
 //        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
 
@@ -99,7 +103,7 @@ public class BaseTest {
 //        ChromiumOptions chromeOptions = new ChromiumOptions().setBinary("/usr/bin/chromium");
 //        webDriver = new ChromiumDriver(chromeOptions);
 //
-//        WebDriverRunner.setWebDriver(webDriver);
+        WebDriverRunner.setWebDriver(webDriver);
 
 
 //        WebDriverFactory driverFactory = new WebDriverFactory();
