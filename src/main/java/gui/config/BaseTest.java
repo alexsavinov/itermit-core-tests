@@ -46,7 +46,7 @@ public class BaseTest {
 //                "webdriver.gecko.driver",
 //                "/usr/local/bin/geckodriver");
 
-//        Configuration.webdriverLogsEnabled = true;
+        Configuration.webdriverLogsEnabled = true;
 //        Configuration.browser = "chrome";
 //        Configuration.browser = SelenoidWebDriverProvider.class.getName();
         Configuration.browser = "firefox";
