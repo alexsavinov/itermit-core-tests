@@ -49,7 +49,7 @@ public class BaseTest {
         Configuration.webdriverLogsEnabled = true;
 //        Configuration.browser = "chrome";
 //        Configuration.browser = SelenoidWebDriverProvider.class.getName();
-        Configuration.browser = "firefox";
+//        Configuration.browser = "firefox";
         Configuration.browserSize = "1280x920";
         Configuration.holdBrowserOpen = false;
         Configuration.headless = true;
