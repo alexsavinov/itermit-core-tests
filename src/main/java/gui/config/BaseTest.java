@@ -121,6 +121,6 @@ public class BaseTest {
     @AfterClass
     public void tearDown() {
         Selenide.closeWebDriver();
-        webDriver.quit();
+//        webDriver.quit();
     }
 }

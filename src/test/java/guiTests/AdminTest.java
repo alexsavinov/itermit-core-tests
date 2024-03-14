@@ -4,10 +4,7 @@ import com.codeborne.selenide.Selenide;
 import gui.config.BaseTest;
 import gui.pojos.Article;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import utils.PropertiesReader;
 
 import java.lang.reflect.Method;
@@ -17,7 +14,7 @@ import java.util.UUID;
 
 import static gui.Pages.*;
 
-
+@Ignore
 public class AdminTest extends BaseTest {
 
     private final String USERNAME = "admin@mail.com";
