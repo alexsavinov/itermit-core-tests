@@ -48,7 +48,7 @@ public class BaseTest {
 //                "/usr/local/bin/geckodriver");
 
         Configuration.webdriverLogsEnabled = true;
-//        Configuration.browser = "chrome";
+        Configuration.browser = "chrome";
 //        Configuration.browser = "firefox";
 //        Configuration.browser = SelenoidWebDriverProvider.class.getName();
         Configuration.browserSize = "1280x920";
