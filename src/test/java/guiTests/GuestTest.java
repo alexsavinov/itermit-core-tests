@@ -30,7 +30,7 @@ public class GuestTest extends BaseTest {
         Assert.assertEquals(mainPage().getNewsHeaderText(), "Last news");
     }
 
-    @Test(enabled = false)
+    @Test()
     public void news_whenClickShowMoreButton_shouldListMoreNews() {
         mainPage().waitForLoad();
 
@@ -47,7 +47,7 @@ public class GuestTest extends BaseTest {
         Assert.assertEquals(articles.size(), 4);
     }
 
-    @Test(enabled = false)
+    @Test()
     public void news_whenClickArticle_shouldShowDetailedArticle() {
         mainPage().getArticleElementsFromMain().get(1).click();
 
@@ -58,7 +58,7 @@ public class GuestTest extends BaseTest {
         Assert.assertTrue(article.getAuthor().startsWith("Author: "));
     }
 
-    @Test(enabled = false)
+    @Test()
     public void news_whenClickBackButton_shouldNavigateToMainPage() {
         mainPage().getArticleElementsFromMain().get(1).click();
         articlePage().clickBackButton();
@@ -70,7 +70,7 @@ public class GuestTest extends BaseTest {
         Assert.assertEquals(articles.size(), 2);
     }
 
-    @Test(enabled = false)
+    @Test()
     public void news_whenClickHomeButton_shouldNavigateToMainPage() {
         mainPage().getArticleElementsFromMain().get(1).click();
         header().clickHomeButton();
