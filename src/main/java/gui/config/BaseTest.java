@@ -69,14 +69,17 @@ public class BaseTest {
 
 //        ChromeDriverManager.getInstance().setup();
 //        ChromiumDriverManager.getInstance().setup();
-        WebDriverManager instance = ChromiumDriverManager.getInstance();
-        instance.setup();
-        webDriver = instance.getWebDriver();
+
+//        WebDriverManager instance = ChromiumDriverManager.getInstance();
+//        instance.setup();
+//        webDriver = instance.getWebDriver();
+
 //        WebDriverManager.chromiumdriver().setup();
 //        ChromeOptions chromeOptions = new ChromeOptions().setBinary("/usr/bin/chromium");
 //        webDriver = new ChromeDriver(chromeOptions);
 
-        WebDriverRunner.setWebDriver(webDriver);
+//        WebDriverRunner.setWebDriver(webDriver);
+        WebDriverManager.chromiumdriver().setup();
 
 //        WebDriverFactory driverFactory = new WebDriverFactory();
 //        driverFactory.createWebDriver()
