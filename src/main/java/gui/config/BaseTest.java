@@ -40,6 +40,7 @@ public class BaseTest {
         HOME_URL = baseUrl;
 
 //        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", "/usr/lib/chromium");
 //        System.setProperty("selenide.browser", "chrome");
 //        System.setProperty("webdriver.firefox.marionette", "false");
 //        System.setProperty(
@@ -47,7 +48,7 @@ public class BaseTest {
 //                "/usr/local/bin/geckodriver");
 
         Configuration.webdriverLogsEnabled = true;
-//        Configuration.browser = "chrome";
+        Configuration.browser = "chrome";
 //        Configuration.browser = SelenoidWebDriverProvider.class.getName();
 //        Configuration.browser = "firefox";
         Configuration.browserSize = "1280x920";
@@ -64,14 +65,15 @@ public class BaseTest {
                 .screenshots(true)
                 .savePageSource(false));
 
+//        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
 
-        WebDriverManager wdm = WebDriverManager.chromiumdriver()
+//        WebDriverManager wdm = WebDriverManager.chromiumdriver()
 //                        .browserInDocker()
 //                .enableVnc()
 //                .enableRecording()
                 ;
 
-        webDriver = wdm.create();
+//        webDriver = wdm.create();
 
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("headless");
