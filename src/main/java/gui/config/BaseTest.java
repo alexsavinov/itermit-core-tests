@@ -39,7 +39,7 @@ public class BaseTest {
         REGISTER_URL = baseUrl + "auth/register";
         HOME_URL = baseUrl;
 
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        System.setProperty("selenide.browser", "chrome");
 //        System.setProperty("webdriver.firefox.marionette", "false");
 //        System.setProperty(
@@ -47,9 +47,9 @@ public class BaseTest {
 //                "/usr/local/bin/geckodriver");
 
 //        Configuration.webdriverLogsEnabled = true;
-        Configuration.browser = "chrome";
+//        Configuration.browser = "chrome";
 //        Configuration.browser = SelenoidWebDriverProvider.class.getName();
-//        Configuration.browser = "firefox";
+        Configuration.browser = "firefox";
         Configuration.browserSize = "1280x920";
         Configuration.holdBrowserOpen = false;
         Configuration.headless = true;
