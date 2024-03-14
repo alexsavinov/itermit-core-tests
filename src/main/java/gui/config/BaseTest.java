@@ -39,7 +39,7 @@ public class BaseTest {
         REGISTER_URL = baseUrl + "auth/register";
         HOME_URL = baseUrl;
 
-//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 //        System.setProperty("selenide.browser", "chrome");
 //        System.setProperty("webdriver.firefox.marionette", "false");
 //        System.setProperty(
@@ -47,7 +47,7 @@ public class BaseTest {
 //                "/usr/local/bin/geckodriver");
 
 //        Configuration.webdriverLogsEnabled = true;
-//        Configuration.browser = "chrome";
+        Configuration.browser = "chrome";
 //        Configuration.browser = SelenoidWebDriverProvider.class.getName();
 //        Configuration.browser = "firefox";
         Configuration.browserSize = "1280x920";
@@ -78,18 +78,18 @@ public class BaseTest {
 //        WebDriverManager instance = ChromeDriverManager.getInstance();
 //        WebDriverManager.chromedriver().setup();
 //        WebDriverManager instance = WebDriverManager.chromedriver();
-        WebDriverManager instance = WebDriverManager.chromiumdriver();
-        instance.setup();
+//        WebDriverManager instance = WebDriverManager.chromiumdriver();
+//        instance.setup();
 //        webDriver = new ChromiumDriver();
 //        webDriver = new ChromeDriver();
 
 //        WebDriverRunner.setWebDriver(webDriver);
 
 //        WebDriverManager.chromiumdriver().setup();
-        ChromeOptions chromeOptions = new ChromeOptions().setBinary("/usr/bin/chromium");
-        webDriver = new ChromeDriver(chromeOptions);
-
-        WebDriverRunner.setWebDriver(webDriver);
+//        ChromiumOptions chromeOptions = new ChromiumOptions().setBinary("/usr/bin/chromium");
+//        webDriver = new ChromiumDriver(chromeOptions);
+//
+//        WebDriverRunner.setWebDriver(webDriver);
 
 
 //        WebDriverFactory driverFactory = new WebDriverFactory();
