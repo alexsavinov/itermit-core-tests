@@ -65,7 +65,7 @@ public class BaseTest {
                 .screenshots(true)
                 .savePageSource(false));
 
-        WebDriverManager.chromiumdriver().setup();
+        WebDriverManager.firefoxdriver().setup();
 //        ChromeOptions opt = new ChromeOptions().setBinary("/usr/bin/chromium");
 //        webDriver = new ChromeDriver(opt);
 //        System.out.println("webDriver -- " + webDriver);
