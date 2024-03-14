@@ -50,7 +50,7 @@ public class BaseTest {
 
         Configuration.webdriverLogsEnabled = true;
 //        Configuration.browser = "chrome";
-//        Configuration.browser = "firefox";
+        Configuration.browser = "firefox";
 //        Configuration.browser = SelenoidWebDriverProvider.class.getName();
         Configuration.browserSize = "1280x920";
         Configuration.holdBrowserOpen = false;
@@ -66,10 +66,10 @@ public class BaseTest {
                 .screenshots(true)
                 .savePageSource(false));
 
-        WebDriverManager firefoxdriver = WebDriverManager.firefoxdriver();
-        firefoxdriver.setup();
-        FirefoxOptions opt = new FirefoxOptions().setBinary("/usr/bin/firefox");
-        webDriver = new FirefoxDriver(opt);
+//        WebDriverManager firefoxdriver = WebDriverManager.firefoxdriver();
+//        firefoxdriver.setup();
+//        FirefoxOptions opt = new FirefoxOptions().setBinary("/usr/bin/firefox");
+//        webDriver = new FirefoxDriver(opt);
 //        System.out.println("webDriver -- " + webDriver);
 //        ChromeOptions options = new ChromeOptions();
 //        options.setBinary("/usr/bin/chromium");
@@ -84,7 +84,7 @@ public class BaseTest {
 //                .enableRecording()
                 ;
 
-        webDriver = firefoxdriver.create();
+//        webDriver = firefoxdriver.create();
 
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("headless");
