@@ -104,7 +104,7 @@ public class BaseTest {
 //        webDriver = new ChromiumDriver();
 //        webDriver = new ChromeDriver();
 
-        WebDriverRunner.setWebDriver(webDriver);
+//        WebDriverRunner.setWebDriver(webDriver);
 
 //        WebDriverManager.chromiumdriver().setup();
 //        ChromiumOptions chromeOptions = new ChromiumOptions().setBinary("/usr/bin/chromium");
