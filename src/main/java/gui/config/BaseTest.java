@@ -65,10 +65,10 @@ public class BaseTest {
                 .screenshots(true)
                 .savePageSource(false));
 
-//        WebDriverManager.chromiumdriver().setup();
-        ChromeOptions opt = new ChromeOptions().setBinary("/usr/bin/chromium");
-        webDriver = new ChromeDriver(opt);
-        System.out.println("webDriver -- " + webDriver);
+        WebDriverManager.chromiumdriver().setup();
+//        ChromeOptions opt = new ChromeOptions().setBinary("/usr/bin/chromium");
+//        webDriver = new ChromeDriver(opt);
+//        System.out.println("webDriver -- " + webDriver);
 //        ChromeOptions options = new ChromeOptions();
 //        options.setBinary("/usr/bin/chromium");
 
@@ -108,7 +108,7 @@ public class BaseTest {
 //        ChromiumOptions chromeOptions = new ChromiumOptions().setBinary("/usr/bin/chromium");
 //        webDriver = new ChromiumDriver(chromeOptions);
 //
-        WebDriverRunner.setWebDriver(webDriver);
+//        WebDriverRunner.setWebDriver(webDriver);
 
 
 //        WebDriverFactory driverFactory = new WebDriverFactory();
@@ -130,6 +130,6 @@ public class BaseTest {
     @AfterClass
     public void tearDown() {
         Selenide.closeWebDriver();
-        webDriver.close();
+//        webDriver.close();
     }
 }
