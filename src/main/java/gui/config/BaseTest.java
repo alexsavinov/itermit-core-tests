@@ -68,8 +68,10 @@ public class BaseTest {
 //        WebDriverManager.chromiumdriver().setup();
 //        ChromeOptions opt = new ChromeOptions().setBinary("/usr/bin/chromium");
 //        webDriver = new ChromeDriver(opt);
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("/usr/bin/chromium");
 
-        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromium");
+//        System.setProperty("webdriver.chrome.driver", "/usr/bin/chromium");
 
 //        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
 
