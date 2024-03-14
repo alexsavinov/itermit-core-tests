@@ -15,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chromium.ChromiumDriver;
 import org.openqa.selenium.chromium.ChromiumOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -65,9 +66,10 @@ public class BaseTest {
                 .screenshots(true)
                 .savePageSource(false));
 
-        WebDriverManager.firefoxdriver().setup();
-//        ChromeOptions opt = new ChromeOptions().setBinary("/usr/bin/chromium");
-//        webDriver = new ChromeDriver(opt);
+        WebDriverManager firefoxdriver = WebDriverManager.firefoxdriver();
+        firefoxdriver.setup();
+        FirefoxOptions opt = new FirefoxOptions().setBinary("/usr/bin/firefox");
+        webDriver = new FirefoxDriver(opt);
 //        System.out.println("webDriver -- " + webDriver);
 //        ChromeOptions options = new ChromeOptions();
 //        options.setBinary("/usr/bin/chromium");
@@ -82,7 +84,7 @@ public class BaseTest {
 //                .enableRecording()
                 ;
 
-//        webDriver = wdm.create();
+        webDriver = firefoxdriver.create();
 
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("headless");
@@ -102,7 +104,7 @@ public class BaseTest {
 //        webDriver = new ChromiumDriver();
 //        webDriver = new ChromeDriver();
 
-//        WebDriverRunner.setWebDriver(webDriver);
+        WebDriverRunner.setWebDriver(webDriver);
 
 //        WebDriverManager.chromiumdriver().setup();
 //        ChromiumOptions chromeOptions = new ChromiumOptions().setBinary("/usr/bin/chromium");
