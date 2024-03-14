@@ -65,6 +65,11 @@ public class BaseTest {
                 .savePageSource(false));
 
 
+        WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker()
+                .enableVnc().enableRecording();
+
+        webDriver = wdm.create();
+
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("headless");
 //        options.setBinary("/usr/bin/chromium");
@@ -83,7 +88,7 @@ public class BaseTest {
 //        webDriver = new ChromiumDriver();
 //        webDriver = new ChromeDriver();
 
-//        WebDriverRunner.setWebDriver(webDriver);
+        WebDriverRunner.setWebDriver(webDriver);
 
 //        WebDriverManager.chromiumdriver().setup();
 //        ChromiumOptions chromeOptions = new ChromiumOptions().setBinary("/usr/bin/chromium");
