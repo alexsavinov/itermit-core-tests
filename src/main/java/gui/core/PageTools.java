@@ -27,20 +27,20 @@ public class PageTools extends CustomLogger {
         return LocatorParses.parseLocator(by, args);
     }
 
-//    protected SelenideElement shouldBe(WebElementCondition condition, By by, Object... args) {
-    protected SelenideElement shouldBe(Condition condition, By by, Object... args) {
+    protected SelenideElement shouldBe(WebElementCondition condition, By by, Object... args) {
+//    protected SelenideElement shouldBe(Condition condition, By by, Object... args) {
         return $(byLocator(by, args)).shouldBe(condition);
     }
 
-//    protected ElementsCollection shouldBe(WebElementsCondition condition, By by, Object... args) {
-    protected ElementsCollection shouldBe(CollectionCondition condition, By by, Object... args) {
+    protected ElementsCollection shouldBe(WebElementsCondition condition, By by, Object... args) {
+//    protected ElementsCollection shouldBe(CollectionCondition condition, By by, Object... args) {
         return $$(byLocator(by, args)).shouldBe(condition);
     }
 
-//    protected SelenideElement shouldBeClickable(WebElementCondition condition1,
-//                                                WebElementCondition condition2,
-    protected SelenideElement shouldBeClickable(Condition condition1,
-                                                Condition condition2,
+    protected SelenideElement shouldBeClickable(WebElementCondition condition1,
+                                                WebElementCondition condition2,
+//    protected SelenideElement shouldBeClickable(Condition condition1,
+//                                                Condition condition2,
                                                 By by, Object... args) {
         return $(byLocator(by, args)).shouldBe(Condition.and("clickable", condition1, condition2));
     }

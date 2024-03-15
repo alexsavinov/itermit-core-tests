@@ -54,8 +54,8 @@ public class BaseTest {
 //        Configuration.browser = SelenoidWebDriverProvider.class.getName();
         Configuration.browserSize = "1280x920";
         Configuration.holdBrowserOpen = false;
-//        Configuration.headless = true;
-        Configuration.headless = false;
+        Configuration.headless = true;
+//        Configuration.headless = false;
         Configuration.timeout = 10000;
         Configuration.pageLoadTimeout = 10000;
         Configuration.pageLoadStrategy = "normal";
