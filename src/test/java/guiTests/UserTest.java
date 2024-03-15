@@ -13,7 +13,7 @@ import java.util.Map;
 
 import static gui.Pages.*;
 
-@Ignore
+//@Ignore
 public class UserTest extends BaseTest {
 
     private final String USERNAME = "user@mail.com";
