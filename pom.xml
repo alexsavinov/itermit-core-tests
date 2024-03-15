@@ -17,8 +17,8 @@
         <slf4j.version>2.0.12</slf4j.version>
         <logback.version>1.4.14</logback.version>
         <testng.version>7.9.0</testng.version>
-<!--        <selenide.version>7.2.1</selenide.version>-->
-        <selenide.version>6.17.2</selenide.version>
+        <selenide.version>7.2.1</selenide.version>
+<!--        <selenide.version>6.17.2</selenide.version>-->
         <allure.version>2.25.0</allure.version>
         <aspectj.version>1.9.21</aspectj.version>
         <rest-assured.version>5.4.0</rest-assured.version>
