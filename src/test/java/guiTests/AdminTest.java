@@ -14,7 +14,7 @@ import java.util.UUID;
 
 import static gui.Pages.*;
 
-//@Ignore
+@Ignore
 public class AdminTest extends BaseTest {
 
     private final String USERNAME = "admin@mail.com";

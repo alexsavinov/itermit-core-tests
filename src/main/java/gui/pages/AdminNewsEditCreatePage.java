@@ -36,7 +36,7 @@ public class AdminNewsEditCreatePage extends PageTools {
     public void focus() {
         waitForLoad();
         click(articleTitle);
-        Selenide.sleep(50);
+        Selenide.sleep(100);
     }
 
     public String getArticleTitleText() {
